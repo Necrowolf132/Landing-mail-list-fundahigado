@@ -1,0 +1,490 @@
+/*
+
+    Basic CSS Prodigy Template
+    -- Mobile First
+
+*/
+
+/*
+    Indice 
+
+    1.- Iniciar sesion          [IS]
+    2.- Registrarse             [RR]
+    3.- Mis viajes              [MV]
+    4.- Pasajeros habituales    [PH]
+    5.- Configuracion de cuenta [CC]
+    --- Pasarela
+    6.- Detalle vuelo salida    [DV]
+    7.- Detalle vuelo regreso   [DV]
+    8.- Detalle vuelo flexible  [DV]
+    9.- Datos del pasajero      [DP]
+    10.-Resumen de compra       [RC-INFO]
+    11.-Resumen de compra pago  [RC-PAGO]
+
+*/
+
+/* Estilos Globales */
+
+html{
+    /*padding-bottom: 70px;*/
+    margin-top: 30px;
+    color: #4d4d4f;
+    font-family: 'Lato', sans-serif;
+}
+
+.ancho-texto{
+    width: 80%;
+}
+.espacio-titulo{
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+
+#form-mobile .input-container label {
+   width: 100%;
+}
+
+
+.form option::first {
+    color: red;
+}
+
+.form label {
+   width: 100%;
+   font-weight: 400;
+   position: relative;
+}
+
+.form label:after {
+   content: "";
+   display: block;
+   position: absolute;
+   top: 20px;
+   right: 12px;
+   width: 0;
+   height: 0;
+   border-style: solid;
+   border-width: 12px 6px 0 6px;
+   border-color: #cb5f22 transparent transparent transparent;
+
+}
+
+.form select{
+   background: white;
+   border-bottom: 2px solid;
+   border-radius: 0;
+   color: #919B9C;
+   -webkit-appearance: none;
+}
+
+
+input:focus {
+    border-color: #cb5f22;
+}
+input:focus::placeholder {
+    color: #424242;
+}
+.color-texto{
+    color:#4d4d4f;
+}
+.centrar-img{
+    text-align: center;
+}
+.espacio-abajo{
+    padding-bottom: 10px !important;
+}
+
+.img-info{
+    height: 120px;
+    padding-top: 50px;
+}
+.img-1{
+    width: 70px;
+}
+.lato{
+    font-family: 'Lato', sans-serif;
+}
+
+.underline{
+    text-decoration: underline;
+}
+
+ul{ /* UPDATED */
+    list-style: none;
+    padding: 0;
+}
+
+
+.form#form-desktop{
+    left: 725px;
+    padding: 80px 45px;
+    text-align: center;
+    background: white;
+    position: absolute;
+    height: 440px;
+    width: 347px;
+    right: 0;
+    top: 0;
+    z-index: 3;
+    box-shadow: 0px 5px 100px -25px rgba(0,0,0,0.61);
+}
+
+.form *{
+    color: #424242;
+}
+
+.img-col{
+    text-align: center;
+}
+
+#home .footer{
+    margin-top: 0;
+}
+
+.form#form-mobile{
+    margin-top: 65px;
+    padding: 70px 25px;
+    box-shadow: 0px 5px 100px -25px rgba(0,0,0,0.61);
+}
+
+
+.form input, .form select{
+    margin: 15px auto;
+    width: 95%;
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+    outline: none;
+    border-bottom-color: #919B9C;
+    font-size: 18px
+}
+
+.form input::placeholder {
+    font-size: 18px;
+}
+
+
+
+.form #submit, #mc-embedded-subscribe{
+    width: 100%;
+}
+
+a:hover, a:active{ /* UPDATED */
+    /*color: white;*/
+    text-decoration: none;
+}
+
+a{
+    cursor: pointer;
+    display: block;
+    text-decoration: none;
+}
+
+p{
+    margin: 0;
+}
+
+.raw ul li { 
+    list-style: none; 
+    line-height: .9;
+}
+
+#typ .title{
+    padding-bottom: 20px;
+    font-size: 40px;
+}
+
+#typ .text-content{
+    font-size: 22px;
+}
+
+#typ .rrss{
+    padding-top: 30px;
+}
+
+#typ .rrss img:hover{
+    color: #919B9C;
+}
+
+#typ .rrss img{
+    color: black;
+}
+
+ul.rrss li img{
+    width: 35px;
+    height: 35px;
+    margin-right: 15px;
+}
+
+ul:not(.rrss) li::before {
+    color: #d5652b;  
+    /* color of bullet or square */
+
+    content: "\2022"; 
+    /* Unicode of character to precede the list item */
+
+    font-size: 40px; 
+    /* em or %*/
+
+    padding-right: 10px; 
+    /* use em*/
+
+    position: relative;
+    top: 8px;
+}
+
+.col-lg-1, .col-lg-10, .col-lg-11, .col-lg-12, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-md-1, .col-md-10, .col-md-11, .col-md-12, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-sm-1, .col-sm-10, .col-sm-11, .col-sm-12, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-xs-1, .col-xs-10, .col-xs-11, .col-xs-12, .col-xs-2, .col-xs-3, .col-xs-4, .col-xs-5, .col-xs-6, .col-xs-7, .col-xs-8, .col-xs-9, .row{
+    padding: 0;
+}
+
+.row:not(.unrow){
+    margin: 0;
+}
+
+.raw .title{
+    margin-bottom: 15px;
+    width: 100%;
+}
+
+.title{
+    font-size: 34px;
+}
+
+.text-content{
+    font-size: 20px;
+}
+
+#submit, #mc-embedded-subscribe{
+    background-color: #cb5f22;
+    color: white;
+    padding: 12px 30px;
+    border-radius: 30px;
+    font-size: 15px;
+}
+
+.btn{
+    font-size: 16px;
+}
+
+.form .title{
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+.custom-id{
+    display: none!important;
+}
+
+.rrss li{
+    display: inline-block;
+}
+
+
+/* ---------- */
+
+.form .text-content{
+    text-align: center;
+    width: 95%;
+    margin: auto;
+}
+
+.container{
+    width: 100%;
+}
+
+.footer{
+    background-size: cover;
+    background-position: center center;
+    margin-top: 50px;
+    height: 408px;
+    width: 100%;
+    position: relative;
+    background-image: url('./img/fh-landing-white-paper.jpg');
+}
+
+.footer .veil{
+    background-color: #cb5f2273;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+}
+
+.content{
+    position: relative;
+    margin-top: 50px;
+}
+
+.raw{
+    max-width: unset;
+}
+
+.main-logo{
+    width: 100%;
+    max-width: 179px;
+    height: auto;
+    margin-left: 15px;
+}
+
+.higado{
+    width: 100%;
+    max-width: 220px;
+    height: auto;
+    margin-top: 55px;
+}
+
+.body-container{
+    width: 100%;
+    max-width: 1024px;
+    margin: 0 auto;
+}
+
+::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+    color: #919B9C;
+}
+
+::-moz-placeholder { /* Firefox 19+ */
+    color: #919B9C;
+}
+
+:-ms-input-placeholder { /* IE 10+ */
+    color: #919B9C;
+}
+
+:-moz-placeholder { /* Firefox 18- */
+    color: #919B9C;
+}
+
+input[type=submit]{
+    display: block;
+}
+
+#home #form-desktop{
+    display: none;
+}
+
+/* ---------------- */
+
+/* Clases Globales- */
+
+.light{
+    font-weight: 300;
+}
+
+.regular{
+    font-weight: 400;
+}
+
+.bold{
+    font-weight: 700;
+}
+.naranja{
+    color:#cb5f22;
+}
+
+.orange{
+    color: #d5652b;
+}
+.blue{
+    color: #4b6eba;
+}
+
+.fw-700{
+    font-weight: 700;
+}
+
+@media only screen and (min-width: 425px) {
+    /* ---GLOBAL---- */
+    /* ------------- */
+
+    /* ---TY-PAGE--- */
+    ul.rrss li img{
+        margin-right: 30px;
+    }
+    /* ------------- */
+
+    /* ---LANDING--- */
+    #home #form-desktop{
+        
+    }
+    /* ------------- */
+}
+
+@media only screen and (min-width: 550px) {
+    #home #form-mobile p{
+        margin: auto;
+        max-width: 250px;
+    }
+    #form-mobile .input-container label {
+        width: 42%;
+        margin: 0 auto;
+        display: block;
+   }
+    #home #form-mobile{
+        text-align: center;
+    }
+    #home #submit, #mc-embedded-subscribe{
+        width: auto;
+        padding: 12px 50px;
+    }
+
+    #home #form-mobile input{
+        width: 40%;
+        margin: 25px 15px;
+    }
+}
+
+@media only screen and (min-width: 750px) {
+    #home #form-mobile input{
+        width: 40%;
+        margin: 25px 214px;
+    }
+    .form label {
+        width: 42%;
+        font-weight: 400;
+        position: relative;
+     }
+    .raw{
+        width: 80%;
+    }
+}
+
+@media only screen and (min-width: 992px) {
+    .img-col{
+        width: 50%;
+    }
+    .form label {
+        width: 100%;
+        font-weight: 400;
+        position: relative;
+     }
+    .raw{
+        width: 50%;
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+    /* ---LANDING--- */
+    #home .footer{
+        margin-top: 0px;
+    }
+
+    #home #form-desktop{
+        display: initial;
+        margin-left: -100px;
+    }
+
+    .img-col{
+        width: 25%;
+    }
+
+    .raw{
+        width: 54.333333%;
+    }
+
+    #form-mobile{
+        display: none;
+    }
+    /* ------------- */
+}
