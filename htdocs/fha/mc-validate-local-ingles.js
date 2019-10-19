@@ -5832,7 +5832,7 @@ function getAbsolutePath() {
                 $('#mce-' + resp.result + '-response').show();
                 $('#mce-' + resp.result + '-response').html(resp.msg);
                 //var ponerfinal = poner1.replace(/\/[A-Za-z0-9_\s]+$/, '/gracias' );
-                var ponerfinal = poner1 + 'gracias' ;
+                var ponerfinal = poner1 + 'thanks' ;
                 $('#mc-embedded-subscribe-form').each(function() {
                     this.reset();
                 });
@@ -5861,7 +5861,13 @@ function getAbsolutePath() {
                 try {
                     var parts = resp.msg.split(' - ', 2);
                     if (parts[1] == undefined) {
-                        msg = resp.msg;
+                        var expre1 = /already subscribed/g;
+                        if(expre1.test(resp.msg)) {
+                            var arrayDeCadenas = resp.msg.split(". ");
+                            msg = arrayDeCadenas[0] + ".";
+                        } else {
+                            msg = resp.msg;
+                        } 
                     } else {
                         i = parseInt(parts[0]);
                         if (i.toString() == parts[0]) {

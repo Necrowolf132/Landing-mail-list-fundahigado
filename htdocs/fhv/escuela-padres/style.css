@@ -51,13 +51,13 @@ p.lato.text-content {
     padding: 55px 45px;
     text-align: center;
     background: white;
-    position: absolute;
-    height: 515px;
     width: 347px;
     right: 0;
     top: 50px;
-    z-index: 3;
+    z-index: 8;
     box-shadow: 0px 5px 100px -25px rgba(0,0,0,0.61);
+    margin-bottom: -100px;
+    margin-left: auto;
 }
 
 .form *{
@@ -144,7 +144,6 @@ input:focus::placeholder {
     width: 95%;
     margin-top: 22.5px;
     background-color: #b1c32f!important;
-    font-size: 18px;
 }
 
 a:hover, a:active{ /* UPDATED */
@@ -238,7 +237,8 @@ ul:not(.rrss) li::before {
     color: white;
     padding: 12px 50px;
     border-radius: 30px;
-    font-size: 15px;
+    font-size: 18px;
+    white-space: normal;
 }
 
 .btn{
@@ -274,7 +274,7 @@ ul:not(.rrss) li::before {
 .footer{
     background-size: cover;
     background-position: center center;
-    margin-top: 50px;
+    z-index: -2;
     height: 336px;
     width: 100%;
     position: relative;
@@ -286,6 +286,7 @@ ul:not(.rrss) li::before {
     width: 100%;
     background-color: #b1c32f73;
     position: absolute;
+    z-index: -1;
     top: 0;
     left: 0;
 }
@@ -339,9 +340,6 @@ input[type=submit]{
     display: block;
 }
 
-#home #form-desktop{
-    display: none;
-}
 
 /* ---------------- */
 
@@ -381,7 +379,19 @@ input[type=submit]{
 .fw-700{
     font-weight: 700;
 }
+@media (max-width: 768px){
+    .form#form-desktop{
+        width: 90%;
+        margin-bottom: -100px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 61px;
+    }
+    #submit, #mc-embedded-subscribe{
+        font-size: 15px;
 
+    }
+}
 @media only screen and (min-width: 425px) {
     /* ---GLOBAL---- */
     /* ------------- */
@@ -453,13 +463,6 @@ input[type=submit]{
 
 @media only screen and (min-width: 1024px) {
     /* ---LANDING--- */
-    #home .footer{
-        margin-top: 40px;
-    }
-
-    #home #form-desktop{
-        display: initial;
-    }
 
     .img-col{
         width: 25%;

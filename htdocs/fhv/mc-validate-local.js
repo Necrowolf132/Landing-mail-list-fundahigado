@@ -5864,8 +5864,9 @@ function getAbsolutePath() {
                     var parts = resp.msg.split(' - ', 2);
                     if (parts[1] == undefined) {
                         console.log("aqui1");
-                        var expre2 = /ya está suscrito/g;   
-                        if( resp.msg == 'Recipient "manjou132@gmail.com" has too many recent signup requests'){
+                        var expre2 = /ya está suscrito/g; 
+                        var expre3 = /has too many recent signup requests/g;     
+                        if(expre3.test(resp.msg)){
                             var re = /(\"[`~!@#$%^&*()_°¬|+\-=?;:'",.<>A-Za-z0-9_\s]+\")/g;
                             var correo = re.exec(resp.msg);                       
                             console.log(correo[1]); // The anchor subpart
@@ -5878,10 +5879,10 @@ function getAbsolutePath() {
                         i = parseInt(parts[0]);
                         if (i.toString() == parts[0]) {
                             index = parts[0];
-                            msg = parts[1];
+                            msg = parts[1]; 
                         } else {
                             index = -1;
-                            if( resp.msg === 'Recipient "manjou132@gmail.com" has too many recent signup requests'){
+                            if( expre3.test(resp.msg)){
                                 var re = /(\"[`~!@#$%^&*()_°¬|+\-=?;:'",.<>A-Za-z0-9_\s]+\")/g;
                                 var correo = re.exec(resp.msg);
                                 console.log(m[0]); // The all substring

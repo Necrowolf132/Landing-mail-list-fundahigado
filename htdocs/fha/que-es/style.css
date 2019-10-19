@@ -37,7 +37,6 @@ html{
 }
 .espacio-titulo{
     margin-top: 100px;
-    margin-bottom: 100px;
 }
 
 #form-mobile .input-container label {
@@ -116,17 +115,16 @@ ul{ /* UPDATED */
 
 
 .form#form-desktop{
-    left: 725px;
-    padding: 80px 45px;
+    padding: 55px 45px;
     text-align: center;
     background: white;
-    position: absolute;
-    height: 440px;
-    width: 347px;
+    width: 367px;
     right: 0;
-    top: 0;
-    z-index: 3;
+    top: 50px;
+    z-index: 8;
     box-shadow: 0px 5px 100px -25px rgba(0,0,0,0.61);
+    margin-bottom: -100px;
+    margin-left: auto;
 }
 
 .form *{
@@ -259,7 +257,8 @@ ul:not(.rrss) li::before {
     color: white;
     padding: 12px 30px;
     border-radius: 30px;
-    font-size: 15px;
+    font-size: 17px;
+    white-space: normal;
 }
 
 .btn{
@@ -295,7 +294,7 @@ ul:not(.rrss) li::before {
 .footer{
     background-size: cover;
     background-position: center center;
-    margin-top: 50px;
+    z-index: -2;
     height: 408px;
     width: 100%;
     position: relative;
@@ -305,6 +304,7 @@ ul:not(.rrss) li::before {
 .footer .veil{
     background-color: #cb5f2273;
     position: absolute;
+    z-index: -1;
     height: 100%;
     width: 100%;
     top: 0;
@@ -360,9 +360,6 @@ input[type=submit]{
     display: block;
 }
 
-#home #form-desktop{
-    display: none;
-}
 
 /* ---------------- */
 
@@ -392,6 +389,20 @@ input[type=submit]{
 
 .fw-700{
     font-weight: 700;
+}
+@media (max-width: 768px){
+    .form#form-desktop{
+        width: 90%;
+        margin-bottom: -100px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 65px;
+    }
+    #submit, #mc-embedded-subscribe{
+        font-size: 15px;
+
+    }
+    
 }
 
 @media only screen and (min-width: 425px) {
@@ -441,7 +452,6 @@ input[type=submit]{
         margin: 25px 214px;
     }
     .form label {
-        width: 42%;
         font-weight: 400;
         position: relative;
      }
@@ -466,14 +476,7 @@ input[type=submit]{
 
 @media only screen and (min-width: 1024px) {
     /* ---LANDING--- */
-    #home .footer{
-        margin-top: 0px;
-    }
 
-    #home #form-desktop{
-        display: initial;
-        margin-left: -100px;
-    }
 
     .img-col{
         width: 25%;
